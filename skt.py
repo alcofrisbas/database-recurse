@@ -53,6 +53,7 @@ def set_key(c, req):
     query = req[1]
     response_body = []
 
+    # set value
     for item in query.split("&"):
         key = item.split("=")[0]
         value = item.split("=")[1]
@@ -70,6 +71,7 @@ def get_key(c, req):
     response_body = []
     items = query.split("&")
 
+    # retrieve value
     if len(items) == 1:
         key = items[0].split("=")[0]
         value = items[0].split("=")[1]
